@@ -1,0 +1,57 @@
+
+Settings Arduino IDE
++++++++++++++++++++++++++++++++++++++++++++++
+
+Introduce Additional Boards Manager
+File - Preferences - Additional Boards Manager:
+http://arduino.esp8266.com/stable/package_esp8266com_index.json
+
+Eventually install latest driver on "esp8266"
+Tools - Board - Boards Manager
+
+Select board
+Toos - Board - NodeMCU 1.0 (ESP-12E Module)
+
+
+Democode Waveshare
++++++++++++++++++++++++++++++++++++++++++++++
+
+https://www.waveshare.com/wiki/Main_Page
+Search: e-paper esp8266 driver board => https://www.waveshare.com/wiki/E-Paper_ESP8266_Driver_Board
+Demo code - Source code - Download 7z file
+
+Extract into folder
+
+Folder "Loader" - Double click on "Loader.ino"
+(will open Arduino IDE)
+
+Connect Board with PC via USB
+
+Select Port: Tools - Port - COM3
+
+
+In Arduino-IDO select file "Loader"
+
+Change the lines with credentials:
+  const char* ssid = "esp8266";
+  const char* password = "epaper2020";
+
+Change lines with IP:
+  IP4_ADDR(&info.ip, 192,168,178,180);
+  IP4_ADDR(&info.gw, 192,168,178,1);
+  IP4_ADDR(&info.netmask, 255,255,255,0);
+
+Upload
+
+Open Serial Monitor
+Set Baudrate to 115200
+
+Push left button on Board => IP address will be displayed => 192.168.178.180
+
+Open IP in Browser
+
+
+
+
+
+
